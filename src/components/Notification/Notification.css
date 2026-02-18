@@ -1,0 +1,18 @@
+.notification{
+    display: flex;
+    flex-direction: row;
+    padding: 1rem;
+    border-radius: 0.5rem;
+    width: 100%;
+    border: 0;
+    background-color: var(--white);
+}
+
+.notification.unread{
+    background-color: var(--blue-100);
+}
+
+.noti__user-img{
+    width: 5rem;
+    height: 5rem;
+}

@@ -1,11 +1,11 @@
 @font-face {
     font-family: "Plus Jakarta Sans Bold";
-    src: url('./assets/fonts/Bricolage_Grotesque/static/PlusJakartaSans-ExtraBold.ttf');
+    src: url('./assets/fonts/static/PlusJakartaSans-ExtraBold.ttf');
 }
 
 @font-face {
     font-family: "Plus Jakarta Sans Medium";
-    src: url('./assets/fonts/Bricolage_Grotesque/static/PlusJakartaSans-Medium.ttf');
+    src: url('./assets/fonts/static/PlusJakartaSans-Medium.ttf');
 }
 
 :root {
@@ -37,7 +37,6 @@ body {
     font-family: 'Plus Jakarta Sans Medium', sans-serif;
     background-color: var(--neutral-900);
     color: var(--neutral-0);
-    font-weight: 400;
     padding: 3rem 1rem;
     display: flex;
     flex-direction:column;
@@ -69,21 +68,23 @@ img {
 button{
     cursor: pointer;
     font-family: 'Plus Jakarta Sans Medium', sans-serif;
-    font-size: 0.9rem;
+    font-size: 1rem;
 }
 
 .transparent-btn{
-    width:100%;
     background-color: transparent;
     border:0;
-    color: var(--neutral-0);
+    color: var(--gray-500);
     text-align: left;
-    padding: 0.4rem;
+    padding: 0;
     border-radius: 0.3rem;
 }
 
 .transparent-btn:hover, .transparent-btn:focus{
-    background-color:var(--neutral-600);
+    color: var(--gray-600);
+}
+.transparent-btn:active{
+    opacity: 0.6;
 }
 
 @media (prefers-reduced-motion: no-preference) {
