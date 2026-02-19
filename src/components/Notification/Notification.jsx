@@ -3,7 +3,7 @@ import './Notification.css'
 function Notification({userImg,userName,notiAction,notiGroup,notiObject,notiTime,isUnread, updateUnread=null}) {
 
     return (
-        <button className={isUnread? "notification unread":"notification"} onClick={updateUnread}>
+        <div className={isUnread? "notification unread":"notification"} onClick={updateUnread}>
             <img className="noti__user-img" src={userImg} alt="user avatar"/>
             <div className="noti__info">     
                 <div>
@@ -22,7 +22,7 @@ function Notification({userImg,userName,notiAction,notiGroup,notiObject,notiTime
                 </div>
                 {notiGroup==="message"&&<a className="noti__message" href="#" target="_blank">{notiObject}</a>}
             </div>
-        </button>
+        </div>
     )
 }
 
