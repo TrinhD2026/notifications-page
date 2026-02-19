@@ -1,18 +1,74 @@
 .notification{
     display: flex;
-    flex-direction: row;
     padding: 1rem;
     border-radius: 0.5rem;
+    gap: 1rem;
+    cursor: auto;
     width: 100%;
     border: 0;
     background-color: var(--white);
+    text-align: left;
 }
-
 .notification.unread{
     background-color: var(--blue-100);
 }
 
+.noti__info{
+    width: 100%;
+}
+
+.noti__info > div{
+    display: flex;
+    justify-content: space-between;
+}
+
+.noti__post, .noti__group{
+    color: var(--gray-600);
+}
+
+.noti__action{
+    color: var(--gray-600);
+}
+.noti__picture{
+    width: 3rem;
+    height: 3rem;
+}
+
 .noti__user-img{
-    width: 5rem;
-    height: 5rem;
+    width: 3rem;
+    height: 3rem;
+}
+
+.noti__paragraphs *{
+    display: inline;
+    margin-right: 0.5rem;
+}
+
+.noti__paragraphs .noti_active{
+    display: inline-block;
+    width: 0.5rem;
+    height: 0.5rem;
+    border-radius: 50%;
+    background-color: var(--red-500);
+}
+
+.text-link {
+    font-family: "Plus Jakarta Sans Bold";
+}
+.text-link:hover{
+    color: var(--blue-950);
+}
+
+.noti__time{
+    margin-top: 0.1rem;
+    color: var(--gray-600);
+}
+
+.noti__message{
+    padding: 1rem;
+    background-color: var(--white);
+    border: 0.15rem solid var(--navy-100);
+    border-radius: 0.5rem;
+    margin-top: 1rem;
+    color: var(--gray-600);
 }

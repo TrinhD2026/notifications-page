@@ -5,18 +5,22 @@ function Notification({userImg,userName,notiAction,notiGroup,notiObject,notiTime
     return (
         <button className={isUnread? "notification unread":"notification"} onClick={updateUnread}>
             <img className="noti__user-img" src={userImg} alt="user avatar"/>
-            <div className="noti__info">
-                <div className="noti__paragraphs">
-                    <p className="noti__user-name">{userName}</p>
-                    <p className="noti__action">{notiAction}</p>
-                    {notiGroup==="post"&&<p className="noti__object post">{notiObject}</p>}
-                    {notiGroup==="group"&&<p className="noti__object group">{notiObject}</p>}
-                    {isUnread&&<div className="noti_active"></div>}
-                </div>
-                <p className="noti__time">{`${notiTime} ago`}</p>
-                {notiGroup==="message"&&<p className="noti__object message">{notiObject}</p>}
+            <div className="noti__info">     
+                <div>
+                    <div>
+                        <div className="noti__paragraphs">
+                            <a className="text-link noti__user-name" href="#" target="_blank">{userName}</a>
+                            <p className="noti__action">{notiAction}</p>
+                            {notiGroup==="post"&&<a className="text-link noti__post" href="#" target="_blank">{notiObject}</a>}
+                            {notiGroup==="group"&&<a className="text-link noti__group" href="#" target="_blank">{notiObject}</a>}
+                            {isUnread&&<div className="noti_active"></div>}
+                        </div>
 
-                {notiGroup==="picture"&&<img className="noti__object message" src={notiObject} alt="your picture"/>}
+                        <p className="noti__time">{`${notiTime} ago`}</p>
+                    </div>
+                    {notiGroup==="picture"&&<a href="#" target="_blank"><img className="noti__picture" src={notiObject} alt="your picture" /></a>}
+                </div>
+                {notiGroup==="message"&&<a className="noti__message" href="#" target="_blank">{notiObject}</a>}
             </div>
         </button>
     )

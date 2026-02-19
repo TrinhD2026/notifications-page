@@ -35,13 +35,18 @@ html {
 
 body {
     font-family: 'Plus Jakarta Sans Medium', sans-serif;
-    background-color: var(--neutral-900);
-    color: var(--neutral-0);
-    padding: 3rem 1rem;
+    background-color: var(--navy-50);
     display: flex;
     flex-direction:column;
     justify-content: center;
     align-items: center;
+}
+
+#root{
+    background-color: var(--white);
+    padding: 2rem;
+    border-radius: 1rem;
+    max-width: 60rem;
 }
 
 li{
@@ -58,12 +63,12 @@ a{
 h2{
     margin-bottom: 0.5rem;
 }
-
+/*
 img {
     max-inline-size: 100%;
     block-size: auto;
     display: block;
-}
+}*/
 
 button{
     cursor: pointer;
@@ -81,7 +86,7 @@ button{
 }
 
 .transparent-btn:hover, .transparent-btn:focus{
-    color: var(--gray-600);
+    color: var(--blue-950);
 }
 .transparent-btn:active{
     opacity: 0.6;
@@ -91,4 +96,9 @@ button{
   a, button {
     transition: all 0.3s ease-out;
   }
+}
+@media screen and (width >= 52rem){
+    body{
+        padding: 2rem;
+    }
 }
