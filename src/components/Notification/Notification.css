@@ -44,7 +44,7 @@
     margin-right: 0.5rem;
 }
 
-.noti__paragraphs .noti_active{
+.noti__paragraphs .noti_unread-status{
     display: inline-block;
     width: 0.5rem;
     height: 0.5rem;
@@ -66,9 +66,20 @@
 
 .noti__message{
     padding: 1rem;
-    background-color: var(--white);
     border: 0.15rem solid var(--navy-100);
     border-radius: 0.5rem;
     margin-top: 1rem;
     color: var(--gray-600);
+}
+.notification .noti__message{
+    background-color: var(--white);
+}
+.notification .noti__message:hover{
+    background-color: var(--blue-100);
+}
+.notification.unread .noti__message{
+    background-color: var(--blue-100);
+}
+.notification.unread .noti__message:hover{
+    background-color: var(--white);
 }

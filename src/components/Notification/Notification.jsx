@@ -13,7 +13,7 @@ function Notification({userImg,userName,notiAction,notiGroup,notiObject,notiTime
                             <p className="noti__action">{notiAction}</p>
                             {notiGroup==="post"&&<a className="text-link noti__post" href="#" target="_blank">{notiObject}</a>}
                             {notiGroup==="group"&&<a className="text-link noti__group" href="#" target="_blank">{notiObject}</a>}
-                            {isUnread&&<div className="noti_active"></div>}
+                            {isUnread&&<div className="noti_unread-status"></div>}
                         </div>
 
                         <p className="noti__time">{`${notiTime} ago`}</p>
